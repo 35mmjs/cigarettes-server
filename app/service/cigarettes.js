@@ -4,19 +4,19 @@ const Service = require('egg').Service;
 const soap = require('soap');
 const crypto = require('crypto');
 
-const url = 'http://paytest.zxhsd.com/services/Exchange?wsdl';
+const url = 'http://paytest.zxhsd.com/services/Exchange?wsdl'; // ws 地址应该也要替换吧？
 const commonStatus = {
   sessionId: null,
 };
 
 const constants = {
-  userid: 'PEIXUN_JH',
-  password: '1',
+  userid: '3301026302', // 'PEIXUN_JH',
+  password: '3301026302', // '1',
   type: '1',
-  dh: '9999999999',
-  khbh: '9999999999',
-  user_pass: '1548070138',
-  unit_pass: '2515D842E14054425A7122403F196ACB',
+  dh: '3301026302', // '9999999999',
+  khbh: '3301026302', // '9999999999',
+  user_pass: '3301026302', // '1548070138',
+  unit_pass: '5E97914C312E0C1FB7D50CFFFB9D58E3', // '2515D842E14054425A7122403F196ACB',
 };
 
 class Cigarettes extends Service {
@@ -60,7 +60,7 @@ class Cigarettes extends Service {
     payRequest.operator_id = '001';
     payRequest.terminal_id = '001';
     payRequest.xslx = 'LS';
-    // payRequest.total_amount = '0.01';
+    payRequest.total_amount = '0.01'; // 一分钱测试
 
     const parValueString = encodeURIComponent(JSON.stringify(payRequest));
     const payParams = {
@@ -150,19 +150,33 @@ class Cigarettes extends Service {
     printData.bmbh = '01';
     printData.bmmc = 'bm001';
     printData.machine_code = '4004537959';
-    printData.printmsg = product.items.map(i => {
-      let row = `${i.id}: `;
-      if (i.cartonNum) {
-        row += `${i.cartonNum} 条 `;
-      }
+    printData.printmsg = ' 杭州歌德大酒店 \n'
+      + '================================\n'
+      + '商品             价格   数量\n'
+      + product.items.map(i => {
+        let row = '--------------------------------\n';
+        if (i.cartonNum) {
+          row += `${i.id}          ${i.price}     ${i.cartonNum} 条\n`;
+          row += '--------------------------------\n';
+        }
 
-      if (i.packetNum) {
-        row += `${i.packetNum} 包`;
-      }
-      return row;
-    }).join('\r\t');
-
-    console.log('===> printData', printData);
+        if (i.packetNum) {
+          row += `${i.id}          ${i.price}     ${i.packetNum} 包\n`;
+          row += '--------------------------------\n';
+        }
+        return row;
+      }).join('\n')
+      + '小计:            80     1\n' // TODO
+      + '--------------------------------\n'
+      // + '小票号:2018-11-06999999 \n'
+      // + '合计:            80      1\n'
+      // + '应收: 80       优惠: 0.00 \n'
+      // + '实收: 80       找零: 0.00 \n'
+      // + '--------------------------------\n'
+      + '结算方式: \n'
+      + '微信支付:         80 \n' // TODO
+      + `     ${new Date().toDateString()} \n`
+      + '--------------------------------\n';
 
     const parValueString = encodeURIComponent(JSON.stringify(printData));
     const printParams = {
