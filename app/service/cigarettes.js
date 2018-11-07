@@ -60,7 +60,7 @@ class Cigarettes extends Service {
     payRequest.operator_id = '001';
     payRequest.terminal_id = '001';
     payRequest.xslx = 'LS';
-    payRequest.total_amount = '0.01'; // 一分钱测试
+    //payRequest.total_amount = '0.01'; // 一分钱测试
 
     const parValueString = encodeURIComponent(JSON.stringify(payRequest));
     const payParams = {
