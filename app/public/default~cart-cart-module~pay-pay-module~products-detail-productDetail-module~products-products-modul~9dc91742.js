@@ -71,19 +71,19 @@ var products = [
         slides: [{
                 title: '丝绸花纹设计',
                 desc: '水松纸以紫红色为主调，配以亮银色花纹图案，图案灵感源自中国传统刺绣工艺，凸显丝绸般的华贵质感。',
-                image: 'assets/烟包/休闲/云端_1.jpg',
+                image: 'assets/烟包/休闲/休闲_1.jpg',
             }, {
                 title: '全球上等烟叶',
                 desc: '将来自北美温带、南美雨林带、非洲亚热带以及云贵高原上等烟叶杂糅成一体，专人专线精密制作。',
-                image: 'assets/烟包/休闲/云端_2.jpg',
+                image: 'assets/烟包/休闲/休闲_2.jpg',
             }, {
                 title: '弹性绵软滤棒',
                 desc: '滤棒绵软且有弹性，带给消费者“初吻”般的绝妙触感。',
-                image: 'assets/烟包/休闲/云端_3.jpg',
+                image: 'assets/烟包/休闲/休闲_3.jpg',
             }, {
                 title: '独特烟叶制作工艺',
                 desc: '采取独特自然醇化与低温处理工艺，使烟叶甜润本色得到升华。',
-                image: 'assets/烟包/休闲/云端_4.jpg',
+                image: 'assets/烟包/休闲/休闲_4.jpg',
             }]
     },
     {
