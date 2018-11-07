@@ -144,6 +144,7 @@ class Cigarettes extends Service {
   }
 
   async print(product) {
+    let total = 0;
     const printData = {};
     printData.printType = 'ZZG';
     printData.khbh = constants.khbh;
@@ -164,9 +165,10 @@ class Cigarettes extends Service {
           row += `${i.id}          ${i.price}     ${i.packetNum} 包\n`;
           row += '--------------------------------\n';
         }
+        total += i.total;
         return row;
       }).join('\n')
-      + '小计:            80     1\n' // TODO
+      + `小计:            ${total.toFixed(2)}\n`
       + '--------------------------------\n'
       // + '小票号:2018-11-06999999 \n'
       // + '合计:            80      1\n'
@@ -174,7 +176,7 @@ class Cigarettes extends Service {
       // + '实收: 80       找零: 0.00 \n'
       // + '--------------------------------\n'
       + '结算方式: \n'
-      + '微信支付:         80 \n' // TODO
+      + '微信支付:         ${total.toFixed(2)} \n' // TODO
       + `     ${new Date().toDateString()} \n`
       + '--------------------------------\n';
 
