@@ -68,7 +68,7 @@ class Cigarettes extends Service {
       svr_type: 'WAPPC1',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -184,7 +184,7 @@ class Cigarettes extends Service {
       svr_type: 'PRINT',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -244,4 +244,11 @@ function getYYYYMM() {
   const y = dt.getFullYear();
   const m = ('00' + (dt.getMonth() + 1)).slice(-2);
   return `${y}${m}`;
+}
+
+function pad2(n) { return n < 10 ? '0' + n : n }
+
+function generateTimeReqestNumber() {
+  var date = new Date();
+  return date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2(date.getDate()) + pad2(date.getHours()) + pad2(date.getMinutes());
 }
