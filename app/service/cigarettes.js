@@ -102,7 +102,7 @@ class Cigarettes extends Service {
       svr_type: 'QUERYW1',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -209,7 +209,7 @@ class Cigarettes extends Service {
             const result = fail('打印失败', serviceReturn.errorMessage.$value);
             this.ctx.body = result;
           } else {
-            const result = success(serviceReturn.stringValue.$value);
+            const result = success({});
             this.ctx.body = result;
           }
 
