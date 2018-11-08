@@ -176,7 +176,7 @@ class Cigarettes extends Service {
       // + '实收: 80       找零: 0.00 \n'
       // + '--------------------------------\n'
       + '结算方式: \n'
-      + '微信支付:         ${total.toFixed(2)} \n' // TODO
+      + `微信支付:         ${total.toFixed(2)} \n`
       + `     ${new Date().toDateString()} \n`
       + '--------------------------------\n';
 
