@@ -168,7 +168,7 @@ class Cigarettes extends Service {
         total += i.total;
         return row;
       }).join('\n')
-      + `小计:            ${total.toFixed(2)}\n`
+      + `小计:            ${Number(total).toFixed(2)}\n`
       + '--------------------------------\n'
       // + '小票号:2018-11-06999999 \n'
       // + '合计:            80      1\n'
@@ -176,7 +176,7 @@ class Cigarettes extends Service {
       // + '实收: 80       找零: 0.00 \n'
       // + '--------------------------------\n'
       + '结算方式: \n'
-      + `微信支付:         ${total.toFixed(2)} \n`
+      + `微信支付:         ${Number(total).toFixed(2)} \n`
       + `     ${new Date().toDateString()} \n`
       + '--------------------------------\n';
 
