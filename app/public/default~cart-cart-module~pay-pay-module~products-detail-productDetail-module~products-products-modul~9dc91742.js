@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~cart-cart-module~products-detail-productDetail-module~products-products-module"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742"],{
 
 /***/ "./src/app/products/product.data.ts":
 /*!******************************************!*\
@@ -13,8 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 var products = [
     {
         category: 'leisure',
-        id: '红利',
-        price: 100,
+        id: '利群（红利）',
+        price: 0,
         image: 'assets/烟包/休闲/红利.png',
         descTitle: '红红火火，顺顺利利！',
         desc: '“砥砺前行，不忘初心”   秉承一颗精益求精的匠心，利群（红利）承载着利群品牌最独特的设计，最先进的技术，并保持一贯“清淡醇和”的经典吸味风格。10余人专业设计团队，特邀美院教授，意大利色彩专家，5次设计研讨，2次现场方案调整，无数次不断完善……每一个环节都倾注着利群人和合作机构的极大心血。峥嵘岁月，不只沉淀了利群品牌的内涵，更磨砺了利群（红利）的未来。',
@@ -38,32 +38,32 @@ var products = [
     },
     {
         category: 'leisure',
-        id: '云端',
-        price: 100,
+        id: '利群（休闲云端）',
+        price: 0,
         image: 'assets/烟包/休闲/云端.png',
         descTitle: '坐看云起时',
         desc: '淡定格局 诗意人生  “行到水穷处，坐看云起时”，人的一生，莫不如此。在充满高速运转与巨大变革的时代洪流里，互联网以及由互联网衍生出万般盛景，人类借助科技手段不断放大对这个世界的认知，我们自身的认知方式也得到不断的深化与拓展，如同旧时山水映射田园牧歌，如今的高科技亦如云时代下别有风味的诗意生活。致敬顶级卷烟鉴赏家，利群（休闲云端）专为顶级卷烟鉴赏家而作，这款出色的卷烟于2016年首发，是利群品牌集合近60年历史、经验知识、技艺和工艺的结晶。从原材料的甄选到制烟工艺上的突破，均意味着利群品牌由此迈向了新的高度。',
         slides: [{
                 title: '科技感线条设计',
                 desc: '水松纸设计细致简洁，无限交织、放射的线条组成一张信息网络，科技而富有时尚感，与外包装相呼应。',
-                image: 'assets/烟包/休闲/云端_1.jpg',
+                image: 'assets/烟包/休闲/云端_3.jpg',
             }, {
                 title: '手工精选优质烟叶',
                 desc: '全球最优质烟叶产地手工逐片精选上等烟叶，优中选优，确保每张烟叶油分充足，叶片舒展，不厚不薄，品质一致。1000担烟叶中只能精选出一担做利群（休闲云端）。',
-                image: 'assets/烟包/休闲/云端_2.jpg',
+                image: 'assets/烟包/休闲/云端_4.jpg',
             }, {
                 title: '84mm细支',
                 desc: '经过长期的潜心探索与大胆尝试，云端从滤嘴的过滤效率和高端消费人群的肺活量两个因素出发，确立吸阻水平和烟支长度，使抽吸时轻松平顺。',
-                image: 'assets/烟包/休闲/云端_3.jpg',
+                image: 'assets/烟包/休闲/云端_2.jpg',
             }, {
                 title: '六边形中空复合滤棒',
                 desc: '利群（休闲云端）滤棒产地位于德国阿尔卑斯山脚，天然木浆纤维滤嘴，配上六边形中空复合滤棒，使烟气气流产生回旋，形同云海，烟气更绵团、更温润、更柔和。',
-                image: 'assets/烟包/休闲/云端_4.jpg',
+                image: 'assets/烟包/休闲/云端_1.jpg',
             }]
     },
     {
         category: 'leisure',
-        id: '休闲',
+        id: '利群（休闲）',
         price: 82,
         image: 'assets/烟包/休闲/休闲.png',
         descTitle: '本香本昧自然休闲',
@@ -71,24 +71,24 @@ var products = [
         slides: [{
                 title: '丝绸花纹设计',
                 desc: '水松纸以紫红色为主调，配以亮银色花纹图案，图案灵感源自中国传统刺绣工艺，凸显丝绸般的华贵质感。',
-                image: 'assets/烟包/休闲/云端_1.jpg',
+                image: 'assets/烟包/休闲/休闲_1.jpg',
             }, {
                 title: '全球上等烟叶',
                 desc: '将来自北美温带、南美雨林带、非洲亚热带以及云贵高原上等烟叶杂糅成一体，专人专线精密制作。',
-                image: 'assets/烟包/休闲/云端_2.jpg',
+                image: 'assets/烟包/休闲/休闲_2.jpg',
             }, {
                 title: '弹性绵软滤棒',
                 desc: '滤棒绵软且有弹性，带给消费者“初吻”般的绝妙触感。',
-                image: 'assets/烟包/休闲/云端_3.jpg',
+                image: 'assets/烟包/休闲/休闲_3.jpg',
             }, {
                 title: '独特烟叶制作工艺',
                 desc: '采取独特自然醇化与低温处理工艺，使烟叶甜润本色得到升华。',
-                image: 'assets/烟包/休闲/云端_4.jpg',
+                image: 'assets/烟包/休闲/休闲_4.jpg',
             }]
     },
     {
         category: 'leisure',
-        id: '逍遥',
+        id: '利群（逍遥）',
         price: 82,
         image: 'assets/烟包/休闲/逍遥.png',
         descTitle: '子非鱼，焉知鱼之乐',
@@ -109,8 +109,8 @@ var products = [
     },
     {
         category: 'leisure',
-        id: '红利',
-        price: 100,
+        id: '利群（红利）',
+        price: 0,
         image: 'assets/烟包/休闲/红利.png',
         descTitle: '红红火火，顺顺利利！',
         desc: '“砥砺前行，不忘初心”   秉承一颗精益求精的匠心，利群（红利）承载着利群品牌最独特的设计，最先进的技术，并保持一贯“清淡醇和”的经典吸味风格。10余人专业设计团队，特邀美院教授，意大利色彩专家，5次设计研讨，2次现场方案调整，无数次不断完善……每一个环节都倾注着利群人和合作机构的极大心血。峥嵘岁月，不只沉淀了利群品牌的内涵，更磨砺了利群（红利）的未来。',
@@ -134,32 +134,32 @@ var products = [
     },
     {
         category: 'leisure',
-        id: '云端',
-        price: 100,
+        id: '利群（休闲云端）',
+        price: 0,
         image: 'assets/烟包/休闲/云端.png',
         descTitle: '坐看云起时',
         desc: '淡定格局 诗意人生  “行到水穷处，坐看云起时”，人的一生，莫不如此。在充满高速运转与巨大变革的时代洪流里，互联网以及由互联网衍生出万般盛景，人类借助科技手段不断放大对这个世界的认知，我们自身的认知方式也得到不断的深化与拓展，如同旧时山水映射田园牧歌，如今的高科技亦如云时代下别有风味的诗意生活。致敬顶级卷烟鉴赏家，利群（休闲云端）专为顶级卷烟鉴赏家而作，这款出色的卷烟于2016年首发，是利群品牌集合近60年历史、经验知识、技艺和工艺的结晶。从原材料的甄选到制烟工艺上的突破，均意味着利群品牌由此迈向了新的高度。',
         slides: [{
                 title: '科技感线条设计',
                 desc: '水松纸设计细致简洁，无限交织、放射的线条组成一张信息网络，科技而富有时尚感，与外包装相呼应。',
-                image: 'assets/烟包/休闲/云端_1.jpg',
+                image: 'assets/烟包/休闲/云端_3.jpg',
             }, {
                 title: '手工精选优质烟叶',
                 desc: '全球最优质烟叶产地手工逐片精选上等烟叶，优中选优，确保每张烟叶油分充足，叶片舒展，不厚不薄，品质一致。1000担烟叶中只能精选出一担做利群（休闲云端）。',
-                image: 'assets/烟包/休闲/云端_2.jpg',
+                image: 'assets/烟包/休闲/云端_4.jpg',
             }, {
                 title: '84mm细支',
                 desc: '经过长期的潜心探索与大胆尝试，云端从滤嘴的过滤效率和高端消费人群的肺活量两个因素出发，确立吸阻水平和烟支长度，使抽吸时轻松平顺。',
-                image: 'assets/烟包/休闲/云端_3.jpg',
+                image: 'assets/烟包/休闲/云端_2.jpg',
             }, {
                 title: '六边形中空复合滤棒',
                 desc: '利群（休闲云端）滤棒产地位于德国阿尔卑斯山脚，天然木浆纤维滤嘴，配上六边形中空复合滤棒，使烟气气流产生回旋，形同云海，烟气更绵团、更温润、更柔和。',
-                image: 'assets/烟包/休闲/云端_4.jpg',
+                image: 'assets/烟包/休闲/云端_1.jpg',
             }]
     },
     {
         category: 'leisure',
-        id: '休闲',
+        id: '利群（休闲）',
         price: 82,
         image: 'assets/烟包/休闲/休闲.png',
         descTitle: '本香本昧自然休闲',
@@ -167,24 +167,24 @@ var products = [
         slides: [{
                 title: '丝绸花纹设计',
                 desc: '水松纸以紫红色为主调，配以亮银色花纹图案，图案灵感源自中国传统刺绣工艺，凸显丝绸般的华贵质感。',
-                image: 'assets/烟包/休闲/云端_1.jpg',
+                image: 'assets/烟包/休闲/休闲_1.jpg',
             }, {
                 title: '全球上等烟叶',
                 desc: '将来自北美温带、南美雨林带、非洲亚热带以及云贵高原上等烟叶杂糅成一体，专人专线精密制作。',
-                image: 'assets/烟包/休闲/云端_2.jpg',
+                image: 'assets/烟包/休闲/休闲_2.jpg',
             }, {
                 title: '弹性绵软滤棒',
                 desc: '滤棒绵软且有弹性，带给消费者“初吻”般的绝妙触感。',
-                image: 'assets/烟包/休闲/云端_3.jpg',
+                image: 'assets/烟包/休闲/休闲_3.jpg',
             }, {
                 title: '独特烟叶制作工艺',
                 desc: '采取独特自然醇化与低温处理工艺，使烟叶甜润本色得到升华。',
-                image: 'assets/烟包/休闲/云端_4.jpg',
+                image: 'assets/烟包/休闲/休闲_4.jpg',
             }]
     },
     {
         category: 'leisure',
-        id: '逍遥',
+        id: '利群（逍遥）',
         price: 82,
         image: 'assets/烟包/休闲/逍遥.png',
         descTitle: '子非鱼，焉知鱼之乐',
@@ -205,7 +205,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '钱塘',
+        id: '利群（钱塘）',
         price: 60,
         image: 'assets/烟包/阳光/钱塘.png',
         descTitle: '潮起钱塘天下浙商',
@@ -226,11 +226,11 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '橙中支',
-        price: 60,
+        id: '利群（阳光橙中支）',
+        price: 0,
         image: 'assets/烟包/阳光/橙中支.png',
         descTitle: '原来，橙可以如此出彩',
-        desc: '利群阳光系新品利群首款中支烟  出彩生活，奢意人生。出彩生活，奢意人生。利群（阳光．橙中支），注重时尚与轻奢感，契合消费者的品质坚持与品位呈现，为消费者带来一场新体验。我们抽的不仅仅是烟，更是个性与格调。匠人造物，不离初心。作为烟草品牌，利群（阳光·橙中支）以精致包装、精湛工艺、精品配方，回归这支烟本身，向喜爱卷烟的消费者们致以崇高敬意。',
+        desc: '利群阳光系新品利群首款中支烟  出彩生活，奢意人生。出彩生活，奢意人生。利群（阳光橙中支），注重时尚与轻奢感，契合消费者的品质坚持与品位呈现，为消费者带来一场新体验。我们抽的不仅仅是烟，更是个性与格调。匠人造物，不离初心。作为烟草品牌，利群（阳光·橙中支）以精致包装、精湛工艺、精品配方，回归这支烟本身，向喜爱卷烟的消费者们致以崇高敬意。',
         slides: [{
                 title: '橙意包装，时尚轻奢',
                 desc: '首度采用亮眼橙色调，精致包装，现代美感油然而生。',
@@ -242,16 +242,16 @@ var products = [
             }, {
                 title: '双腔一体，保润保香',
                 desc: '贴心独立包装，一包各10支，有效保留卷烟新鲜度。',
-                image: 'assets/烟包/阳光/橙中支_3.jpg',
+                image: 'assets/烟包/阳光/橙中支_4.jpg',
             }, {
                 title: '阳光口感，饱满悠扬',
                 desc: '香气透发饱满、柔绵舒缓，余味干净舒适。',
-                image: 'assets/烟包/阳光/橙中支_4.jpg',
+                image: 'assets/烟包/阳光/橙中支_3.jpg',
             }]
     },
     {
         category: 'sunshine',
-        id: '金色阳光',
+        id: '利群（软金色阳光）',
         price: 51,
         image: 'assets/烟包/阳光/金色阳光.png',
         descTitle: '我心向太阳',
@@ -276,7 +276,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '阳光',
+        id: '利群（阳光）',
         price: 48,
         image: 'assets/烟包/阳光/阳光.png',
         descTitle: '轻松一口阳光味道',
@@ -301,11 +301,11 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '软阳光',
+        id: '利群（软长嘴）',
         price: 36,
         image: 'assets/烟包/阳光/软阳光.png',
         descTitle: '轻松一口阳光味道',
-        desc: '阳光系产品开山之作。利群（软阳光）选择国内外香气足、焦油含量低的优质烟叶，精心配比，研制出独特的馥郁、醇厚的高端卷烟口味。其作为首款阳光系产品，于2005年上市，是引领“阳光系”乃至“利群”实现品牌升级突破的关键所在，让“利群”以全新的形象崛起于高端市场。传承利群品牌经典平和的原生魅力，利群（软阳光）立足于优质纯正的烤烟香气，以国内外高档优质烟叶为主体，塑造丰富饱满的立体烟香特征；追求协调、流畅而富有层次感的烟气。传承利群品牌经典平和的原香魅力，亦重新雕琢利群（软阳光）的卓越馥郁与绵长。',
+        desc: '阳光系产品开山之作。利群（软长嘴）选择国内外香气足、焦油含量低的优质烟叶，精心配比，研制出独特的馥郁、醇厚的高端卷烟口味。其作为首款阳光系产品，于2005年上市，是引领“阳光系”乃至“利群”实现品牌升级突破的关键所在，让“利群”以全新的形象崛起于高端市场。传承利群品牌经典平和的原生魅力，利群（软阳光）立足于优质纯正的烤烟香气，以国内外高档优质烟叶为主体，塑造丰富饱满的立体烟香特征；追求协调、流畅而富有层次感的烟气。传承利群品牌经典平和的原香魅力，亦重新雕琢利群（软阳光）的卓越馥郁与绵长。',
         slides: [{
                 title: '沉稳尊贵的设计',
                 desc: '延续利群（阳光）深咖啡色的主体色调，以及沉稳尊贵的包装气质，赋予更加低调、品味之感。',
@@ -322,7 +322,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '西子阳光',
+        id: '利群（西子阳光）',
         price: 31,
         image: 'assets/烟包/阳光/西子阳光.png',
         descTitle: '细而有味 口口满足',
@@ -335,7 +335,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '江南忆',
+        id: '利群（江南忆）',
         price: 30,
         image: 'assets/烟包/阳光/江南忆.png',
         descTitle: '当莫奈遇到乌镇',
@@ -348,7 +348,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '钱塘',
+        id: '利群（钱塘）',
         price: 60,
         image: 'assets/烟包/阳光/钱塘.png',
         descTitle: '潮起钱塘天下浙商',
@@ -369,11 +369,11 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '橙中支',
-        price: 60,
+        id: '利群（阳光橙中支）',
+        price: 0,
         image: 'assets/烟包/阳光/橙中支.png',
         descTitle: '原来，橙可以如此出彩',
-        desc: '利群阳光系新品利群首款中支烟  出彩生活，奢意人生。出彩生活，奢意人生。利群（阳光．橙中支），注重时尚与轻奢感，契合消费者的品质坚持与品位呈现，为消费者带来一场新体验。我们抽的不仅仅是烟，更是个性与格调。匠人造物，不离初心。作为烟草品牌，利群（阳光·橙中支）以精致包装、精湛工艺、精品配方，回归这支烟本身，向喜爱卷烟的消费者们致以崇高敬意。',
+        desc: '利群阳光系新品利群首款中支烟  出彩生活，奢意人生。出彩生活，奢意人生。利群（阳光橙中支），注重时尚与轻奢感，契合消费者的品质坚持与品位呈现，为消费者带来一场新体验。我们抽的不仅仅是烟，更是个性与格调。匠人造物，不离初心。作为烟草品牌，利群（阳光·橙中支）以精致包装、精湛工艺、精品配方，回归这支烟本身，向喜爱卷烟的消费者们致以崇高敬意。',
         slides: [{
                 title: '橙意包装，时尚轻奢',
                 desc: '首度采用亮眼橙色调，精致包装，现代美感油然而生。',
@@ -385,16 +385,16 @@ var products = [
             }, {
                 title: '双腔一体，保润保香',
                 desc: '贴心独立包装，一包各10支，有效保留卷烟新鲜度。',
-                image: 'assets/烟包/阳光/橙中支_3.jpg',
+                image: 'assets/烟包/阳光/橙中支_4.jpg',
             }, {
                 title: '阳光口感，饱满悠扬',
                 desc: '香气透发饱满、柔绵舒缓，余味干净舒适。',
-                image: 'assets/烟包/阳光/橙中支_4.jpg',
+                image: 'assets/烟包/阳光/橙中支_3.jpg',
             }]
     },
     {
         category: 'sunshine',
-        id: '金色阳光',
+        id: '利群（软金色阳光）',
         price: 51,
         image: 'assets/烟包/阳光/金色阳光.png',
         descTitle: '我心向太阳',
@@ -419,7 +419,7 @@ var products = [
     },
     {
         category: 'sunshine',
-        id: '阳光',
+        id: '利群（阳光）',
         price: 48,
         image: 'assets/烟包/阳光/阳光.png',
         descTitle: '轻松一口阳光味道',
@@ -444,7 +444,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '国色天香',
+        id: '利群（硬）',
         price: 26,
         image: 'assets/烟包/原生/国色天香.png',
         descTitle: '醇厚饱满，国色天香',
@@ -465,7 +465,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '西湖恋',
+        id: '利群（西湖恋）',
         price: 23,
         image: 'assets/烟包/原生/西湖恋.png',
         descTitle: '一半勾留是此湖',
@@ -490,7 +490,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '长嘴',
+        id: '利群（长嘴）',
         price: 22,
         image: 'assets/烟包/原生/长嘴.png',
         descTitle: '滤嘴长一点，味道好一点',
@@ -511,7 +511,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '软红长嘴',
+        id: '利群（软红长嘴）',
         price: 22,
         image: 'assets/烟包/原生/软红长嘴.png',
         descTitle: '滤嘴长一点，味道好一点',
@@ -528,7 +528,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '薄荷',
+        id: '利群（薄荷）',
         price: 21,
         image: 'assets/烟包/原生/薄荷.png',
         descTitle: '瞬间舒畅',
@@ -545,8 +545,8 @@ var products = [
     },
     {
         category: 'origin',
-        id: '夜西湖',
-        price: 20,
+        id: '利群（夜西湖）',
+        price: 0,
         image: 'assets/烟包/原生/夜西湖.png',
         descTitle: 'BE YOURSELF',
         desc: '别让白天的忙 带走你月夜星光  夜，是白天的延续，是生活的延续，也是自我的延续。白天认真工作、夜晚释放“自我”，虽然两种生活截然不同，但都是表达同一个自己。回归最真实的自我，跟随内心，享受自己喜欢的生活！利群（夜西湖），为“释放真性情”而生。',
@@ -566,7 +566,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '软蓝',
+        id: '利群（软蓝）',
         price: 18,
         image: 'assets/烟包/原生/软蓝.png',
         descTitle: '清雅似蓝天',
@@ -583,7 +583,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '蓝天',
+        id: '利群（蓝天）',
         price: 16,
         image: 'assets/烟包/原生/蓝天.png',
         descTitle: '清雅似蓝天',
@@ -600,7 +600,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '新二代',
+        id: '利群（新二代）',
         price: 16,
         image: 'assets/烟包/原生/新二代.png',
         descTitle: '新二代 新未来 THE NEXT AGE',
@@ -617,7 +617,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '老版',
+        id: '利群（老版）',
         price: 16,
         image: 'assets/烟包/原生/老版.png',
         descTitle: '轻松舒适	原味生香',
@@ -634,7 +634,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '新版',
+        id: '利群（新版）',
         price: 14,
         image: 'assets/烟包/原生/新版.png',
         descTitle: '轻松舒适	原味生香',
@@ -651,14 +651,14 @@ var products = [
     },
     {
         category: 'origin',
-        id: '新版8mg',
+        id: '利群（8mg新版）',
         price: 14,
         image: 'assets/烟包/原生/新版8mg.png',
         descTitle: '轻松舒适	原味生香',
-        desc: '轻松怡然的升级作品 “生活本应轻松一点儿”，低焦的概念与利群品牌平和从容的理念不谋而合。利群（新版8mg）在新版利群的基础上，以实现低焦油、高品质为重点研发方向，是利群秉承科学减害降焦研发理念，优化配方结构后的升级之作。细腻温润的低焦之作，利群（新版8mg）采用科学配方，运用新型材料、特殊制丝工艺，以特殊的加工处理工艺、精准设计的辅材应用，有效降低了产品的焦油量，低焦含量使得烟香更纯正、香气更饱满、品吸更轻松、满足感更好。',
+        desc: '轻松怡然的升级作品 “生活本应轻松一点儿”，低焦的概念与利群品牌平和从容的理念不谋而合。利群（8mg新版）在新版利群的基础上，以实现低焦油、高品质为重点研发方向，是利群秉承科学减害降焦研发理念，优化配方结构后的升级之作。细腻温润的低焦之作，利群（新版8mg）采用科学配方，运用新型材料、特殊制丝工艺，以特殊的加工处理工艺、精准设计的辅材应用，有效降低了产品的焦油量，低焦含量使得烟香更纯正、香气更饱满、品吸更轻松、满足感更好。',
         slides: [{
                 title: '低焦油新版',
-                desc: '利群（新版8mg），呈现醇和淡雅、舒适清爽的吸味特征。',
+                desc: '利群（8mg新版），呈现醇和淡雅、舒适清爽的吸味特征。',
                 image: 'assets/烟包/原生/新版8mg_1.jpg',
             }, {
                 title: '珠光水松纸设计',
@@ -672,7 +672,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '国色天香',
+        id: '利群（硬）',
         price: 26,
         image: 'assets/烟包/原生/国色天香.png',
         descTitle: '醇厚饱满，国色天香',
@@ -693,7 +693,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '西湖恋',
+        id: '利群（西湖恋）',
         price: 23,
         image: 'assets/烟包/原生/西湖恋.png',
         descTitle: '一半勾留是此湖',
@@ -718,7 +718,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '长嘴',
+        id: '利群（长嘴）',
         price: 22,
         image: 'assets/烟包/原生/长嘴.png',
         descTitle: '滤嘴长一点，味道好一点',
@@ -739,7 +739,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '软红长嘴',
+        id: '利群（软红长嘴）',
         price: 22,
         image: 'assets/烟包/原生/软红长嘴.png',
         descTitle: '滤嘴长一点，味道好一点',
@@ -756,7 +756,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '薄荷',
+        id: '利群（薄荷）',
         price: 21,
         image: 'assets/烟包/原生/薄荷.png',
         descTitle: '瞬间舒畅',
@@ -773,8 +773,8 @@ var products = [
     },
     {
         category: 'origin',
-        id: '夜西湖',
-        price: 20,
+        id: '利群（夜西湖）',
+        price: 0,
         image: 'assets/烟包/原生/夜西湖.png',
         descTitle: 'BE YOURSELF',
         desc: '别让白天的忙 带走你月夜星光  夜，是白天的延续，是生活的延续，也是自我的延续。白天认真工作、夜晚释放“自我”，虽然两种生活截然不同，但都是表达同一个自己。回归最真实的自我，跟随内心，享受自己喜欢的生活！利群（夜西湖），为“释放真性情”而生。',
@@ -794,7 +794,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '软蓝',
+        id: '利群（软蓝）',
         price: 18,
         image: 'assets/烟包/原生/软蓝.png',
         descTitle: '清雅似蓝天',
@@ -811,7 +811,7 @@ var products = [
     },
     {
         category: 'origin',
-        id: '蓝天',
+        id: '利群（蓝天）',
         price: 16,
         image: 'assets/烟包/原生/蓝天.png',
         descTitle: '清雅似蓝天',
@@ -877,4 +877,4 @@ var ProductService = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=default~cart-cart-module~products-detail-productDetail-module~products-products-module.js.map
+//# sourceMappingURL=default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742.js.map

@@ -1540,24 +1540,25 @@ webpackContext.id = "./node_modules/@ionic/core/dist/ionic/svg sync ./!./!./node
 var map = {
 	"./cart/cart.module": [
 		"./src/app/cart/cart.module.ts",
-		"default~cart-cart-module~products-detail-productDetail-module~products-products-module",
+		"default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742",
 		"common",
 		"cart-cart-module"
 	],
 	"./pay/pay.module": [
 		"./src/app/pay/pay.module.ts",
+		"default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742",
 		"common",
 		"pay-pay-module"
 	],
 	"./products/detail/productDetail.module": [
 		"./src/app/products/detail/productDetail.module.ts",
-		"default~cart-cart-module~products-detail-productDetail-module~products-products-module",
+		"default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742",
 		"common",
 		"products-detail-productDetail-module"
 	],
 	"./products/products.module": [
 		"./src/app/products/products.module.ts",
-		"default~cart-cart-module~products-detail-productDetail-module~products-products-module",
+		"default~cart-cart-module~pay-pay-module~products-detail-productDetail-module~products-products-modul~9dc91742",
 		"common",
 		"products-products-module"
 	]

@@ -4,19 +4,19 @@ const Service = require('egg').Service;
 const soap = require('soap');
 const crypto = require('crypto');
 
-const url = 'http://paytest.zxhsd.com/services/Exchange?wsdl';
+const url = 'http://paytest.zxhsd.com/services/Exchange?wsdl'; // ws 地址应该也要替换吧？
 const commonStatus = {
   sessionId: null,
 };
 
 const constants = {
-  userid: 'PEIXUN_JH',
-  password: '1',
+  userid: '3301026302', // 'PEIXUN_JH',
+  password: '3301026302', // '1',
   type: '1',
-  dh: '9999999999',
-  khbh: '9999999999',
-  user_pass: '1548070138',
-  unit_pass: '2515D842E14054425A7122403F196ACB',
+  dh: '3301026302', // '9999999999',
+  khbh: '3301026302', // '9999999999',
+  user_pass: '3301026302', // '1548070138',
+  unit_pass: '5E97914C312E0C1FB7D50CFFFB9D58E3', // '2515D842E14054425A7122403F196ACB',
 };
 
 class Cigarettes extends Service {
@@ -60,7 +60,7 @@ class Cigarettes extends Service {
     payRequest.operator_id = '001';
     payRequest.terminal_id = '001';
     payRequest.xslx = 'LS';
-    // payRequest.total_amount = '0.01';
+    //payRequest.total_amount = '0.01'; // 一分钱测试
 
     const parValueString = encodeURIComponent(JSON.stringify(payRequest));
     const payParams = {
@@ -68,7 +68,7 @@ class Cigarettes extends Service {
       svr_type: 'WAPPC1',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -102,7 +102,7 @@ class Cigarettes extends Service {
       svr_type: 'QUERYW1',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -144,25 +144,41 @@ class Cigarettes extends Service {
   }
 
   async print(product) {
+    let total = 0;
     const printData = {};
     printData.printType = 'ZZG';
     printData.khbh = constants.khbh;
     printData.bmbh = '01';
     printData.bmmc = 'bm001';
     printData.machine_code = '4004537959';
-    printData.printmsg = product.items.map(i => {
-      let row = `${i.id}: `;
-      if (i.cartonNum) {
-        row += `${i.cartonNum} 条 `;
-      }
+    printData.printmsg = ' 杭州歌德大酒店 \n'
+      + '================================\n'
+      + '商品             价格   数量\n'
+      + product.items.map(i => {
+        let row = '--------------------------------\n';
+        if (i.cartonNum) {
+          row += `${i.id}          ${i.price}     ${i.cartonNum} 条\n`;
+          row += '--------------------------------\n';
+        }
 
-      if (i.packetNum) {
-        row += `${i.packetNum} 包`;
-      }
-      return row;
-    }).join('\r\t');
-
-    console.log('===> printData', printData);
+        if (i.packetNum) {
+          row += `${i.id}          ${i.price}     ${i.packetNum} 包\n`;
+          row += '--------------------------------\n';
+        }
+        total += i.total;
+        return row;
+      }).join('\n')
+      + `小计:            ${Number(total).toFixed(2)}\n`
+      + '--------------------------------\n'
+      // + '小票号:2018-11-06999999 \n'
+      // + '合计:            80      1\n'
+      // + '应收: 80       优惠: 0.00 \n'
+      // + '实收: 80       找零: 0.00 \n'
+      // + '--------------------------------\n'
+      + '结算方式: \n'
+      + `微信支付:         ${Number(total).toFixed(2)} \n`
+      + `     ${new Date().toDateString()} \n`
+      + '--------------------------------\n';
 
     const parValueString = encodeURIComponent(JSON.stringify(printData));
     const printParams = {
@@ -170,7 +186,7 @@ class Cigarettes extends Service {
       svr_type: 'PRINT',
       par_value: parValueString,
       md5_value: crypto.createHash('md5').update(
-        `${parValueString}${constants.khbh}${constants.user_pass}${getYYYYMM()}${constants.unit_pass}`
+        `${parValueString}${constants.khbh}${constants.user_pass}${generateTimeReqestNumber()}${constants.unit_pass}`
       ).digest('hex')
         .toUpperCase(),
     };
@@ -195,7 +211,7 @@ class Cigarettes extends Service {
             const result = fail('打印失败', serviceReturn.errorMessage.$value);
             this.ctx.body = result;
           } else {
-            const result = success(serviceReturn.stringValue.$value);
+            const result = success({});
             this.ctx.body = result;
           }
 
@@ -230,4 +246,11 @@ function getYYYYMM() {
   const y = dt.getFullYear();
   const m = ('00' + (dt.getMonth() + 1)).slice(-2);
   return `${y}${m}`;
+}
+
+function pad2(n) { return n < 10 ? '0' + n : n }
+
+function generateTimeReqestNumber() {
+  var date = new Date();
+  return date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2(date.getDate()) + pad2(date.getHours()) + pad2(date.getMinutes());
 }

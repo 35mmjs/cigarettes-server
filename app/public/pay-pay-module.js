@@ -2465,6 +2465,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _plugin_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../plugin.service */ "./src/app/plugin.service.ts");
 /* harmony import */ var _pay_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pay.service */ "./src/app/pay/pay.service.ts");
 /* harmony import */ var _cart_cart_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../cart/cart.service */ "./src/app/cart/cart.service.ts");
+/* harmony import */ var _products_products_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../products/products.service */ "./src/app/products/products.service.ts");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2516,14 +2525,16 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var PayPage = /** @class */ (function () {
-    function PayPage(router, payService, cartService, loadingController, alertController, pluginService) {
+    function PayPage(router, payService, cartService, loadingController, alertController, pluginService, productService) {
         this.router = router;
         this.payService = payService;
         this.cartService = cartService;
         this.loadingController = loadingController;
         this.alertController = alertController;
         this.pluginService = pluginService;
+        this.productService = productService;
         this.qrcode = '';
         this.queryInterval = null;
         this.maxPollingTime = 10;
@@ -2670,10 +2681,16 @@ var PayPage = /** @class */ (function () {
     };
     PayPage.prototype.callPrint = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var productMap, items;
             var _this = this;
             return __generator(this, function (_a) {
+                productMap = this.productService.getProducts().reduce(function (prev, curr) {
+                    prev[curr.id] = curr;
+                    return prev;
+                }, {});
+                items = this.cartService.getItems().map(function (i) { return (__assign({}, i, { total: (productMap[i.id].price * (i.packetNum + i.cartonNum * 10)).toFixed(2) }, productMap[i.id])); });
                 this.pluginService.Print({
-                    'items': this.cartService.getItems()
+                    'items': items,
                 }).then(function (res) {
                     if (res.success) {
                         // 打印成功提示
@@ -2681,6 +2698,9 @@ var PayPage = /** @class */ (function () {
                             header: '打印成功!',
                             message: '请取走票据',
                         });
+                        setTimeout(function () {
+                            _this.router.navigate(['/']);
+                        }, 1000);
                     }
                     else {
                         _this.printFailed(res.errorMessage);
@@ -2714,7 +2734,8 @@ var PayPage = /** @class */ (function () {
             _cart_cart_service__WEBPACK_IMPORTED_MODULE_6__["CartService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"],
-            _plugin_service__WEBPACK_IMPORTED_MODULE_4__["PluginService"]])
+            _plugin_service__WEBPACK_IMPORTED_MODULE_4__["PluginService"],
+            _products_products_service__WEBPACK_IMPORTED_MODULE_7__["ProductService"]])
     ], PayPage);
     return PayPage;
 }());
